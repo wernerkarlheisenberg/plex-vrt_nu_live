@@ -1,0 +1,39 @@
+import channels
+
+####################################################################################################
+def NormalizeURL(url):
+    return url
+
+####################################################################################################
+def MetadataObjectForURL(url):
+
+    for channel in channels.channelList:
+        if channel.url_name in url:
+            break
+
+    return VideoClipObject(
+        title = channel.name,
+        summary = "Kijk live naar " + channel.name + "!",
+        thumb = channel.logo_name
+    )
+
+####################################################################################################
+def MediaObjectsForURL(url):
+
+  return [
+		MediaObject(
+			parts = [
+				PartObject(
+					key=HTTPLiveStreamURL(Callback(PlayVideo, url=url))
+				)
+			],
+			video_resolution = 'sd',
+			audio_channels = 1,
+			optimized_for_streaming = True
+		)
+	]
+
+####################################################################################################
+@indirect
+def PlayVideo(url, **kwargs):
+    return IndirectResponse(VideoClipObject, key=url)

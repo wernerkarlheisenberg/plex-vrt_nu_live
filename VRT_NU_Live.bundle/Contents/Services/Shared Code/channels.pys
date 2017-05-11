@@ -1,0 +1,12 @@
+class Channel(object):
+    def __init__(self, name, url_name, logo_name):
+        self.name = name
+        self.url_name = url_name
+        self.logo_name = logo_name
+
+logo_directory = 'http://cdnfiles.medialaan.be/images/channels/bw/'
+channelList = [
+    Channel('één', 'vrt_video1', logo_directory + 'logo_een.png'),
+    Channel('canvas', 'vrt_video2', logo_directory + 'logo_canvas.png'),
+    Channel('ketnet', 'events3', logo_directory + 'logo_ketnet.png')
+    ]
