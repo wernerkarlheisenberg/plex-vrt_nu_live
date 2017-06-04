@@ -8,7 +8,7 @@ def NormalizeURL(url):
 def MetadataObjectForURL(url):
 
     for channel in channels.channelList:
-        if channel.url_name in url:
+        if channel.url_id in url:
             break
 
     return VideoClipObject(
