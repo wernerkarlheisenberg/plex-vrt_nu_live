@@ -14,5 +14,8 @@ This plugin is meant to livestream VRT channels using VRT NU. VRT NU also contai
 archive, which is not accessible via this plugin. If there is interest to access this
 archive via a Plex Plugin and want to collaborate, please let me know.
 
+# Known Issues
+* People using Windows 8(.1), please have a look at [Issue 3](https://github.com/wernerkarlheisenberg/plex-stieve/issues/3). It turns out that the included python libraries in Plex Media Server differ between platforms.
+
 # Issues
 When have problems, please file an issue. To speed up the troubleshooting process, please add a copy of the plugin (com.plexapp.plugins.vrt_nu.log), system (com.plexapp.system.log) and server log (Plex Media Server.log).
