@@ -8,7 +8,7 @@
     <dict>
       <key>URLPatterns</key>
       <array>
-        <string>https://live-aka.vrtcdn.be/.+</string>
+        <string>https://live-w.lwc.vrtcdn.be/.+</string>
       </array>
     </dict>
   </dict>
